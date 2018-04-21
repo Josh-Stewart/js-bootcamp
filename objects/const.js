@@ -3,7 +3,6 @@ const person = {
 }
 
 person.age = 34
-
-person = {}
+// person = {} //not allowed
 
 console.log(person)
