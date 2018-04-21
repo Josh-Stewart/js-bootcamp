@@ -3,13 +3,13 @@
 // 15/20 -> you got a C (75%)!
 // A 90-100. B 80-89
 
-let calcStudentGrade = function (score, totalPossibleScore)
+const calcStudentGrade = function (score, totalPossibleScore)
 {
     if (score === undefined || totalPossibleScore === undefined) {
         return `Error`
     }
 
-    let percentageScore = (score / totalPossibleScore) * 100
+    const percentageScore = (score / totalPossibleScore) * 100
     let grade = undefined
 
     if (percentageScore >= 90) { //A

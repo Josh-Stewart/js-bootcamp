@@ -17,10 +17,10 @@ console.log(square(10))
 
 // Challenge
 
-let convertFahrenheightToCelcius = function (fahrenheight) {
-    let celsius = (fahrenheight - 32) * 5 / 9
+let convertFahrenheitToCelcius = function (fahrenheit) {
+    let celsius = (fahrenheit - 32) * 5 / 9
     return celsius
 }
 
-console.log(convertFahrenheightToCelcius(32))
-console.log(convertFahrenheightToCelcius(68))
+console.log(convertFahrenheitToCelcius(32))
+console.log(convertFahrenheitToCelcius(68))

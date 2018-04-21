@@ -1,17 +1,17 @@
-//global scope (convertFahrenheightToCelcius, tempOne, tempTwo)
-    //local scope (fahrenheight, celcius)
+//global scope (convertFahrenheitToCelcius, tempOne, tempTwo)
+    //local scope (fahrenheit, celcius)
         //local scope (isFreezing)
 
-let convertFahrenheightToCelcius = function (fahrenheight) {
-    let celsius = (fahrenheight - 32) * 5 / 9
+let convertFahrenheitToCelcius = function (fahrenheit) {
+    let celsius = (fahrenheit - 32) * 5 / 9
     if (celsius <= 0) {
         let isFreezing = true
     } 
     return celsius
 }
 
-let tempOne = convertFahrenheightToCelcius(32)
-let tempTwo = convertFahrenheightToCelcius(68)
+let tempOne = convertFahrenheitToCelcius(32)
+let tempTwo = convertFahrenheitToCelcius(68)
 
 console.log(tempOne)
 console.log(tempTwo)
