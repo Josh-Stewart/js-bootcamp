@@ -1,24 +1,39 @@
-// create an array with five todos
-// you have x todo
-// print first and second to last items -> todo: walk the dog
+const todos = [{
+    text:'learn js',
+    completed: true
+},{
+    text:'learn react',
+    completed: false
+},{
+    text:'learn AWS',
+    completed: false
+},{
+    text: 'study maths',
+    completed: false
+},{
+    text: 'get a real job',
+    completed: true
+}]
 
-const todoList = ['learn js', 'learn react', 'learn AWS', 'study maths', 'get a real job']
+// 1. convert to array of objects -> text, completed (bool)
+// 2. create function to remove a todo by text value
 
-// console.log(`Todo: ${todoList[0]}`)
-// console.log(`Todo: ${todoList[todoList.length-2]}`)
-
-// todoList.splice(2,1)
-// todoList.push('New item')
-// todoList.shift()
-
-console.log(`You have ${todoList.length} todos`)
-
-// todoList.forEach(function (item, index) {
-//     console.log(`${index + 1}. ${item}`)
-// })
-
-for (let i=0; i < todoList.length; i++) {
-    const num = i + 1
-    const todo = todoList[i]
-    console.log(`${num}. ${todo}`)
+// use findIndex
+const findTodo = function (todos, searchString) {
+    searchString = 'get a real job'
+    return todos.findIndex(function (item, index) {
+        return item.text.toLowerCase() === searchString.toLowerCase()
+    })
 }
+
+// deletes a todo from a todo list if it is found
+const deleteTodo = function (list, searchString) {
+    const index = findTodo(list, searchString)
+    if (index > -1) {
+        list.splice(index,1)
+    }
+}
+
+let text = 'Learn JS'
+deleteTodo(todos, text)
+console.log(todos)

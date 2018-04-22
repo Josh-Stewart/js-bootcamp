@@ -1,31 +1,29 @@
-const notes = ['Note 1','Note 2','Note 3']
+const notes = [{
+    title: 'My next trip',
+    body: 'I would like to go to mars'
+}, {
+    title: 'Habbits to work on',
+    body: 'Coding'
+}, {
+    title: 'House modifications',
+    body: 'Remove tree from the back garden'
+}]
 
-// notes.pop()
-// notes.push('My new note')
-
-// console.log(notes.shift())
-// notes.unshift('My first note')
-
-// notes.splice(1, 1, 'New second item')
-
-notes[2] = 'New note 3'
-
-notes.forEach(function (item, index) {
-    console.log(index)
-    console.log(item)
-})
-
-console.log(notes.length)
-console.log(notes)
-
-
-// Counting... 1
-for (let i = 0; i <= 2; i++) {
-    console.log(i)
+// use array.find
+const findNote = function (notes, noteTitle) {
+    return notes.find(function (item, index) {
+        return item.title.toLowerCase() === noteTitle.toLowerCase()
+    })
 }
 
-for (let i=0; i < notes.length; i++) {
-    console.log(notes[i])
-}
+// use array.findIndex
+// const findNote = function (notes, noteTitle) {
+//     const index = notes.findIndex(function (item, index) {
+//         return item.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+//     return notes[index]
+// }
 
-//console.log(notes.indexOf('note 2'))
+const note = findNote(notes, 'house modifications')
+console.log(note)
+
