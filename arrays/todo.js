@@ -15,8 +15,6 @@ const todos = [{
     completed: true
 }]
 
-// 1. convert to array of objects -> text, completed (bool)
-// 2. create function to remove a todo by text value
 
 // use findIndex
 const findTodo = function (todos, searchString) {
@@ -34,14 +32,31 @@ const deleteTodo = function (list, searchString) {
     }
 }
 
+const sortByCompleted = function (todoArray) {
+    todoArray.sort(function (a,b) {
+        if (!a.completed && b.completed){
+            return -1
+        } else if (!b.completed && a.completed) {
+            return 1
+        } else {
+            return 0
+        }
+
+    })
+}
+
+sortByCompleted(todos)
+console.log(todos)
+
+//let text = 'Learn JS'
+//deleteTodo(todos, text)
+//console.log(todos)
+
 const getThingsToDo = function (todos) {
     return todos.filter(function (item, index) {
         return !item.completed
     })    
 }
 
-console.log(getThingsToDo(todos))
+//console.log(getThingsToDo(todos))
 
-//let text = 'Learn JS'
-//deleteTodo(todos, text)
-//console.log(todos)

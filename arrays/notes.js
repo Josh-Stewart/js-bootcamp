@@ -2,12 +2,27 @@ const notes = [{
     title: 'My next trip',
     body: 'I would like to go to mars'
 }, {
+    title: 'House mods',
+    body: 'Remove tree from garden'
+}, {
     title: 'Habbits to work on',
     body: 'Coding argh!'
-}, {
-    title: 'House modifications',
-    body: 'Remove tree from the back garden'
 }]
+
+const sortNotes = function (notes){
+    notes.sort(function (a,b) {
+        if (a.title.toLowerCase() < b.title.toLowerCase()){
+            return -1
+        } else if (b.title.toLowerCase() < a.title.toLowerCase() ){
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+
+sortNotes(notes)
+console.log(notes)
 
 // function to find a note given a complete noteTitle.
 // use array.find which returns the object back that it finds in the array
@@ -28,7 +43,7 @@ const findNotes = function (notes, searchTerm) {
     })
 }
 
-console.log(findNotes(notes,'ar'))
+//console.log(findNotes(notes,'ar'))
 
 // use array.findIndex
 // const findNote = function (notes, noteTitle) {
@@ -38,6 +53,6 @@ console.log(findNotes(notes,'ar'))
 //     return notes[index]
 // }
 
-const note = findNote(notes, 'house modifications')
-console.log(note)
+//const note = findNote(notes, 'house modifications')
+//console.log(note)
 
