@@ -34,6 +34,14 @@ const deleteTodo = function (list, searchString) {
     }
 }
 
-let text = 'Learn JS'
-deleteTodo(todos, text)
-console.log(todos)
+const getThingsToDo = function (todos) {
+    return todos.filter(function (item, index) {
+        return !item.completed
+    })    
+}
+
+console.log(getThingsToDo(todos))
+
+//let text = 'Learn JS'
+//deleteTodo(todos, text)
+//console.log(todos)
