@@ -32,3 +32,11 @@ todos.forEach( function (item, index){
     paragraph.textContent = `${item.text}` //no need to put this into a template string!
     document.querySelector('body').appendChild(paragraph)
 })
+
+const button = document.createElement('button')
+button.textContent = 'Add Todo'
+document.querySelector('body').appendChild(button)
+
+document.querySelector('button').addEventListener('click', function (e) {
+    console.log('The button was clicked')
+})
