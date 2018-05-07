@@ -34,5 +34,5 @@ todos.forEach( function (item, index){
 })
 
 document.querySelector('#add-todo').addEventListener('click', function (e) {
-    console.log('The button was clicked')
+    console.log('Add a new todo...')
 })
