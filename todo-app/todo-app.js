@@ -33,10 +33,6 @@ todos.forEach( function (item, index){
     document.querySelector('body').appendChild(paragraph)
 })
 
-const button = document.createElement('button')
-button.textContent = 'Add Todo'
-document.querySelector('body').appendChild(button)
-
-document.querySelector('button').addEventListener('click', function (e) {
+document.querySelector('#add-todo').addEventListener('click', function (e) {
     console.log('The button was clicked')
 })
